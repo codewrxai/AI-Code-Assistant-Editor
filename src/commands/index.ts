@@ -41,7 +41,8 @@ export { Command, CommandManager } from './commandManager'
 export function registerVscodeOpenAICommands(
   context: ExtensionContext,
   commandManager: CommandManager,
-  embeddingTree: EmbeddingTreeDataProvider
+  embeddingTree: EmbeddingTreeDataProvider,
+  editorEnabled: boolean
 ): Disposable {
   // Conversation
   commandManager.register(new NewConversationStandardCommand())
@@ -69,16 +70,26 @@ export function registerVscodeOpenAICommands(
   commandManager.register(new NewEmbeddingFileCommand())
   commandManager.register(new EmbeddingsSettingsCommand())
 
-  // SCM (git)
-  commandManager.register(new GenerateCommentsCommand())
+  // Mackey Kinard
+  if (editorEnabled === true)
+  {
+    // SCM (git)
+    commandManager.register(new GenerateCommentsCommand())
 
-  // Editor
-  commandManager.register(new EditorSettingsCommand())
-  commandManager.register(new EditorCodeCommentCommand())
-  commandManager.register(new EditorCodeExplainCommand())
-  commandManager.register(new EditorCodeBountyCommand())
-  commandManager.register(new EditorCodeOptimizeCommand())
-  commandManager.register(new EditorCodePatternsCommand())
+    // Editor
+    commandManager.register(new EditorSettingsCommand())
+    commandManager.register(new EditorCodeCommentCommand())
+    commandManager.register(new EditorCodeExplainCommand())
+    commandManager.register(new EditorCodeBountyCommand())
+    commandManager.register(new EditorCodeOptimizeCommand())
+    commandManager.register(new EditorCodePatternsCommand())
+
+    console.warn("VSCODE-OPENAI - Editor commands enabled.");
+  }
+  else
+  {
+    console.warn("VSCODE-OPENAI - Editor commands disabled.");
+  }
 
   // Configuration
   commandManager.register(new ConfigurationShowQuickpick(context))

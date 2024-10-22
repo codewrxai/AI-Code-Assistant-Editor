@@ -14,10 +14,17 @@ import {
   conversationsWebviewViewProvider,
 } from './providers'
 import { disableServiceFeature } from './services/featureFlagServices'
+import * as vscode from 'vscode'; // Mackey Kinard
 
 export function activate(context: ExtensionContext) {
   try {
     disableServiceFeature()
+
+    // Mackey Kinard
+    const config = vscode.workspace.getConfiguration('vscode-openai');
+    const isEditorEnabled = config.get<boolean>('editor.enabled', true);
+    vscode.commands.executeCommand('setContext', 'vscode-openai.editor.enabled', isEditorEnabled);
+    console.warn("VSCODE-OPENAI - IsEditorEnabled: ", isEditorEnabled);
 
     // Enable logging and telemetry
     TelemetryService.init(context)
@@ -34,7 +41,7 @@ export function activate(context: ExtensionContext) {
     const commandManager = new CommandManager()
     const embeddingTree = new EmbeddingTreeDataProvider(context)
     context.subscriptions.push(
-      registerVscodeOpenAICommands(context, commandManager, embeddingTree)
+      registerVscodeOpenAICommands(context, commandManager, embeddingTree, isEditorEnabled) // Mackey Kinard
     )
     conversationsWebviewViewProvider(context)
 
