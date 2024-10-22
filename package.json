@@ -89,7 +89,7 @@
     ],
     "icons": {
       "vscode-openai": {
-        "description": "vscode-openai",
+        "description": "codewrx-openai",
         "default": {
           "fontPath": "./assets/vscode-openai.woff",
           "fontCharacter": "\\E900"
@@ -100,7 +100,7 @@
       "activitybar": [
         {
           "id": "vscode-openai-sidebar-view",
-          "title": "vscode-openai",
+          "title": "codewrx-openai",
           "icon": "./assets/openai-sidebar.svg",
           "when": "vscode-openai.extension.enabled"
         }
@@ -133,7 +133,7 @@
       ]
     },
     "configuration": {
-      "title": "vscode-openai",
+      "title": "codewrx-openai",
       "properties": {
         "vscode-openai.editor.enabled": {
           "type": "boolean",
