@@ -50,7 +50,7 @@ When **custom vscode-openai extension** provides code examples you can copy dire
 
 ## Source Control
 
-The **custom vscode-openai extension** extension has a powerful feature that allows it to automatically generate comments by analyzing source code changes. This feature saves developers time and effort by automating the process of writing comments for their code.
+The **custom vscode-openai extension** has a powerful feature that allows it to automatically generate comments by analyzing source code changes. This feature saves developers time and effort by automating the process of writing comments for their code.
 
 When you make changes to your code, the vs code-open extension analyzes those changes and generates comments based on the context of the change. For example, if you add a new function to your code, the extension will create a comment describing what it does and how it works.
 

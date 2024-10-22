@@ -1,5 +1,5 @@
 {
-  "name": "vscode-openai",
+  "name": "codewrx-openai",
   "displayName": "codewrx-openai",
   "description": "A custom vscode-openai extension that seamlessly incorporates OpenAI features into VSCode.",
   "version": "1.6.11",
