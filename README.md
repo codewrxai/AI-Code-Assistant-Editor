@@ -30,13 +30,13 @@ Note: To activate the setup, you have two options: either use the command **"vsc
 
 ## Conversations
 
-The vscode-openai conversation feature have been meticulously crafted to enhance your coding experience by providing rapid and accurate answers to your programming questions. Whether you require assistance with syntax, debugging, or wish to delve deeper into a specific topic, the extension is readily available to support you. By delivering precise and timely responses, we ensure that you can maintain focus on your work without any disruptions. Download our extension today and discover the convenience of having an intelligent chatbot at your fingertips while coding.
+The **custom vscode-openai extension** conversation feature have been meticulously crafted to enhance your coding experience by providing rapid and accurate answers to your programming questions. Whether you require assistance with syntax, debugging, or wish to delve deeper into a specific topic, the extension is readily available to support you. By delivering precise and timely responses, we ensure that you can maintain focus on your work without any disruptions. Download our extension today and discover the convenience of having an intelligent chatbot at your fingertips while coding.
 
 ![vscode-openai-conversation.png](images/vscode-openai-conversation.png)
 
 ### Persona
 
-The vscode-openai persona conversation feature offers a customized and interactive dialogue with an expert, designed to address your specific programming needs. This powerful functionality enables you to quickly access valuable insights and engage in carefully curated conversations that cater to your unique requirements.
+The **custom vscode-openai extension** persona conversation feature offers a customized and interactive dialogue with an expert, designed to address your specific programming needs. This powerful functionality enables you to quickly access valuable insights and engage in carefully curated conversations that cater to your unique requirements.
 
 By leveraging the expertise of our AI-driven chatbot, you can efficiently resolve coding challenges, explore new concepts, and receive guidance on best practices – all within the familiar environment of Visual Studio Code. Experience the benefits of having immediate access to a knowledgeable conversation partner, empowering you to enhance your skills and streamline your development process.
 
@@ -44,13 +44,13 @@ By leveraging the expertise of our AI-driven chatbot, you can efficiently resolv
 
 ### Source Code
 
-When vscode-openai provides code examples you can copy directly into the clipboard or send the results to a new (source code) documents.
+When **custom vscode-openai extension** provides code examples you can copy directly into the clipboard or send the results to a new (source code) documents.
 
 ![vscode-openai-chat2editor.png](images/vscode-openai-chat2editor.png)
 
 ## Source Control
 
-The vscode-openai extension has a powerful feature that allows it to automatically generate comments by analyzing source code changes. This feature saves developers time and effort by automating the process of writing comments for their code.
+The **custom vscode-openai extension** extension has a powerful feature that allows it to automatically generate comments by analyzing source code changes. This feature saves developers time and effort by automating the process of writing comments for their code.
 
 When you make changes to your code, the vs code-open extension analyzes those changes and generates comments based on the context of the change. For example, if you add a new function to your code, the extension will create a comment describing what it does and how it works.
 
@@ -64,15 +64,15 @@ Provides quick access to useful features whilst working with source code and des
 
 ![vscode-openai-explain.gif](images/vscode-openai-explain.gif)
 
-- **Bug Bounty**: vscode-openai's bug-finding feature analyzes code, highlights potential bugs, and helps proactively identify and correct errors for improved code quality and reliability.
-- **Optimize**: vscode-openai suggests specific optimizations to enhance code performance, such as streamlining loops or applying better algorithms, resulting in more efficient software and better user experiences.
-- **Explain**: vscode-openai explains coding concepts in plain language, making it easier for developers to understand and improve their coding skills.
-- **Comments**: vscode-openai allows adding comments to methods, improving code readability and maintainability by providing context and explanations.
-- **Design Patterns**: vscode-openai analyzes code structure and behavior to suggest suitable design patterns, helping developers write more robust, scalable, and maintainable applications.
+- **Bug Bounty**: The extension's bug-finding feature analyzes code, highlights potential bugs, and helps proactively identify and correct errors for improved code quality and reliability.
+- **Optimize**: The extension suggests specific optimizations to enhance code performance, such as streamlining loops or applying better algorithms, resulting in more efficient software and better user experiences.
+- **Explain**: The extension explains coding concepts in plain language, making it easier for developers to understand and improve their coding skills.
+- **Comments**: The extension allows adding comments to methods, improving code readability and maintainability by providing context and explanations.
+- **Design Patterns**: The extension analyzes code structure and behavior to suggest suitable design patterns, helping developers write more robust, scalable, and maintainable applications.
 
 ## Custom Source Integration
 
-This new feature for vscode-openai provides a powerful addition allows users to load their own sources to enhance the conversation experience and provide tailored assistance based on the latest standards, library documentation, or specialist subjects.
+This new feature for the **custom vscode-openai extension** provides a powerful addition allows users to load their own sources to enhance the conversation experience and provide tailored assistance based on the latest standards, library documentation, or specialist subjects.
 
 To activate this feature, you can register or re-register your OpenAI service provider. This will enable you to choose the suitable model for embedding. However, please note that due to rate limiting, this feature is exclusively available for Azure and Native OpenAI services.
 
@@ -80,11 +80,11 @@ To activate this feature, you can register or re-register your OpenAI service pr
 
 #### How It Works:
 
-- **Upload Your Sources**: Easily upload documents in various formats (e.g., pdf, docx, ...) through a user-friendly interface within vscode-openai.
-- **Indexing and Processing**: Once uploaded, vscode-openai will index and process the content of your documents, making them available for use during conversations.
-- **Smart Contextual Assistance**: When asking questions or seeking help related to your custom sources, vscode-openai will intelligently search through the uploaded content and provide accurate answers based on the information found in those documents.
+- **Upload Your Sources**: Easily upload documents in various formats (e.g., pdf, docx, ...) through a user-friendly interface within the **custom vscode-openai extension**.
+- **Indexing and Processing**: Once uploaded, the **custom vscode-openai extension** will index and process the content of your documents, making them available for use during conversations.
+- **Smart Contextual Assistance**: When asking questions or seeking help related to your custom sources, the **custom vscode-openai extension** will intelligently search through the uploaded content and provide accurate answers based on the information found in those documents.
 
-With Custom Source Integration for vscode-openai, users now have an even more powerful tool at their disposal, enabling them to stay informed and up-to-date with the latest standards, libraries, and specialist subjects. This feature not only enhances the overall user experience but also empowers developers, researchers, and educators alike to excel in their respective fields.
+With Custom Source Integration for the **custom vscode-openai extension**, users now have an even more powerful tool at their disposal, enabling them to stay informed and up-to-date with the latest standards, libraries, and specialist subjects. This feature not only enhances the overall user experience but also empowers developers, researchers, and educators alike to excel in their respective fields.
 
 ## Detecting Issues
 
