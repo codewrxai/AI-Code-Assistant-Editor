@@ -12,15 +12,15 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=arbs-io_vscode-openai&metric=bugs)](https://sonarcloud.io/summary/new_code?id=arbs-io_vscode-openai)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=arbs-io_vscode-openai&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=arbs-io_vscode-openai)
 
-The custom vscode-openai extension is a powerful and versatile tool designed to integrate OpenAI features seamlessly into the vscode editor. By leveraging this extension, you can obtain instant answers to your questions without the need to switch between multiple applications, allowing you to maintain focus on your coding environment.
+The **custom vscode-openai extension** is a powerful and versatile tool designed to integrate OpenAI features seamlessly into the vscode editor. By leveraging this extension, you can obtain instant answers to your questions without the need to switch between multiple applications, allowing you to maintain focus on your coding environment.
 
 This extension provides support for both a **sponsored (free) openai instance** exclusive to extension users and **Bring-Your-Own-Key (BYOK)** options for vanilla **OpenAI** and **Azure-OpenAI**. The intuitive quick-pick menu system enables rapid configuration of service providers, while also offering the flexibility to customize settings as needed. For detailed guidance on configuring service providers, please refer to the Configuring Service Providers section.
 
-In case you encounter difficulties connecting to your own OpenAI service, the [Detecting Issues](#detecting-issues) segment offers troubleshooting tips and insights to help resolve any configuration issues. Experience an enhanced coding experience with the custom **vscode-openai** extension – your go-to solution for seamless interaction with OpenAI services.
+In case you encounter difficulties connecting to your own OpenAI service, the [Detecting Issues](#detecting-issues) segment offers troubleshooting tips and insights to help resolve any configuration issues. Experience an enhanced coding experience with the **custom vscode-openai extension** – your go-to solution for seamless interaction with OpenAI services.
 
 ## Setup
 
-The Quick Pick feature of the custom vscode-openai extension is a convenient and efficient configuration for service providers. With options to choose from sponsored, native, or Azure-OpenAI instances, you can tailor your selection based on your specific needs. This feature not only saves time but also offers step-by-step guidance and customized settings to ensure a smooth setup experience.
+The Quick Pick feature of the **custom vscode-openai extension** is a convenient and efficient configuration for service providers. With options to choose from sponsored, native, or Azure-OpenAI instances, you can tailor your selection based on your specific needs. This feature not only saves time but also offers step-by-step guidance and customized settings to ensure a smooth setup experience.
 
 Once configured, you can effortlessly utilize OpenAI features within VSCode without any interruptions to your workflow.
 
