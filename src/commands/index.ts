@@ -8,6 +8,7 @@ import {
   ShowConversationMarkdownCommand,
   ClipboardCopyConversationSummaryCommand,
   DeleteConversationCommand,
+  EditConversationCommand,
 } from './conversation'
 import {
   RefreshConversationsCommand,
@@ -45,13 +46,14 @@ export function registerVscodeOpenAICommands(
   embeddingTree: EmbeddingTreeDataProvider,
   editorEnabled: boolean
 ): Disposable {
-  // Conversation
+  // Conversation (Mackey Kinard)
   commandManager.register(new NewConversationStandardCommand())
   commandManager.register(new NewConversationPersonaCommand(context))
   commandManager.register(new OpenConversationWebviewCommand())
   commandManager.register(new ShowConversationJsonCommand())
   commandManager.register(new ShowConversationMarkdownCommand())
   commandManager.register(new ClipboardCopyConversationSummaryCommand())
+  commandManager.register(new EditConversationCommand())
   commandManager.register(new DeleteConversationCommand())
 
   // Conversations

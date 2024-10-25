@@ -3,10 +3,11 @@ import { OutputChannel, window, workspace } from 'vscode'
 class OutputChannelFactory {
   private static outLogChannel: OutputChannel
 
+  // Mackey Kinard
   public static getLogChannel(): OutputChannel {
     if (!OutputChannelFactory.outLogChannel) {
       OutputChannelFactory.outLogChannel = window.createOutputChannel(
-        'vscode-openai',
+        'codewrx-openai',
         'vscode-openai-log'
       )
     }

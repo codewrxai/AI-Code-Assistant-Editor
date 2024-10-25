@@ -1,18 +1,18 @@
 {
-  "name": "vscode-openai",
-  "displayName": "vscode-openai",
-  "description": "vscode-openai seamlessly incorporates OpenAI features into VSCode, providing integration with SCM, Code Editor and Chat.",
+  "name": "codewrx-openai",
+  "displayName": "codewrx-openai",
+  "description": "A custom vscode-openai extension that seamlessly incorporates codewrx.ai features into VSCode. Originally published by arbs.io",
   "version": "1.6.12",
-  "publisher": "AndrewButson",
+  "publisher": "CODEWRX",
   "icon": "images/logo_128x128.png",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arbs-io/vscode-openai.git"
+    "url": "https://github.com/codewrxai/ai-code-assistant-editor.git"
   },
   "sponsor": {
-    "url": "https://github.com/sponsors/arbs-io"
+    "url": "https://github.com/codewrxai"
   },
   "engines": {
     "vscode": "^1.81.0"
@@ -56,6 +56,7 @@
   },
   "keywords": [
     "ai",
+    "codewrx",
     "chatgpt",
     "codex",
     "copilot",
@@ -88,7 +89,7 @@
     ],
     "icons": {
       "vscode-openai": {
-        "description": "vscode-openai",
+        "description": "codewrx-openai",
         "default": {
           "fontPath": "./assets/vscode-openai.woff",
           "fontCharacter": "\\E900"
@@ -99,7 +100,7 @@
       "activitybar": [
         {
           "id": "vscode-openai-sidebar-view",
-          "title": "vscode-openai",
+          "title": "codewrx-openai",
           "icon": "./assets/openai-sidebar.svg",
           "when": "vscode-openai.extension.enabled"
         }
@@ -132,8 +133,14 @@
       ]
     },
     "configuration": {
-      "title": "vscode-openai",
+      "title": "codewrx-openai",
       "properties": {
+        "vscode-openai.editor.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable OpenAI code completion features.",
+          "order": 100
+        },        
         "vscode-openai.serviceProvider": {
           "type": "string",
           "default": "OpenAI",
@@ -623,9 +630,14 @@
           "group": "conversation03@2"
         },
         {
-          "command": "_vscode-openai.conversation.delete",
+          "command": "_vscode-openai.conversation.edit",
           "when": "webviewId == 'vscode-openai.conversations.view.sidebar' && webviewSection == 'conversation'",
           "group": "conversation04@1"
+        },
+        {
+          "command": "_vscode-openai.conversation.delete",
+          "when": "webviewId == 'vscode-openai.conversations.view.sidebar' && webviewSection == 'conversation'",
+          "group": "conversation04@2"
         }
       ],
       "view/item/context": [
@@ -700,46 +712,46 @@
             "light": "./assets/openai-light.png",
             "dark": "./assets/openai-dark.png"
           },
-          "when": "vscode-openai.extension.enabled && scmProvider == git"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled && scmProvider == git"
         }
       ],
       "editor/title": [
         {
           "submenu": "vscode-openai.menu.editor",
           "group": "navigation-vscode-openai@100",
-          "when": "!activeEditorIsReadonly"
+          "when": "!activeEditorIsReadonly && vscode-openai.editor.enabled"
         }
       ],
       "vscode-openai.menu.editor": [
         {
           "command": "_vscode-openai.editor.code.comment",
           "group": "prompt-editor.source@1",
-          "when": "vscode-openai.extension.enabled"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled"
         },
         {
           "command": "_vscode-openai.editor.code.explain",
           "group": "prompt-editor.source@1",
-          "when": "vscode-openai.extension.enabled"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled"
         },
         {
           "command": "_vscode-openai.editor.code.bounty",
           "group": "prompt-editor.source@1",
-          "when": "vscode-openai.extension.enabled"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled"
         },
         {
           "command": "_vscode-openai.editor.code.optimize",
           "group": "prompt-editor.source@1",
-          "when": "vscode-openai.extension.enabled"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled"
         },
         {
           "command": "_vscode-openai.editor.code.pattern",
           "group": "prompt-editor.source@1",
-          "when": "vscode-openai.extension.enabled"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled"
         },
         {
           "command": "_vscode-openai.editor.settings",
           "group": "prompt-editor.source.setting",
-          "when": "vscode-openai.extension.enabled"
+          "when": "vscode-openai.extension.enabled && vscode-openai.editor.enabled"
         }
       ],
       "vscode-openai.menu.explorer": [
@@ -777,6 +789,10 @@
     ],
     "commands": [
       {
+        "command": "setContext",
+        "title": "Set Context"
+      },
+      {
         "command": "_vscode-openai.explorer.copy.markdown",
         "title": "Copy as Markdown",
         "category": "vscode-openai.conversation.new"
@@ -812,6 +828,11 @@
         "command": "_vscode-openai.conversation.show.json",
         "title": "Show Json",
         "category": "vscode-openai.conversation.show"
+      },
+      {
+        "command": "_vscode-openai.conversation.edit",
+        "title": "Edit Name",
+        "category": "vscode-openai.conversation.edit"
       },
       {
         "command": "_vscode-openai.conversation.delete",

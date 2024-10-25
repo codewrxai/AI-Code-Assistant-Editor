@@ -6,4 +6,5 @@ export { default as ShowConversationJsonCommand } from './openJson'
 export { default as ShowConversationMarkdownCommand } from './openMarkdown'
 
 export { default as ClipboardCopyConversationSummaryCommand } from './copyClipboardSummary'
+export { default as EditConversationCommand } from './edit'
 export { default as DeleteConversationCommand } from './delete'

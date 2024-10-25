@@ -39,10 +39,10 @@ export const WelcomeMessageBar: React.FC<IChatCompletionListProps> = ({
           <MessageBar intent="success">
             <MessageBarBody>
               <MessageBarTitle>Welcome</MessageBarTitle>
-              I'm your Copilot and I'm here to help you get things done faster.
-              Please read the vscode-openai extensions page for{' '}
+              I'm your AI Code Assistant and I'm here to help you get things done faster.
+              Please read the codewrx-openai extension page for{' '}
               <Link
-                href="https://marketplace.visualstudio.com/items?itemName=AndrewButson.vscode-openai"
+                href="https://github.com/codewrxai/ai-code-assistant-editor.git"
                 inline
               >
                 more information
