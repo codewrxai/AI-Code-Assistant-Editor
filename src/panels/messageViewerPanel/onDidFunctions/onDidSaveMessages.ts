@@ -43,7 +43,8 @@ export const onDidSaveMessages = async (
 
       function messageCallback(_type: string, data: IChatCompletion): void {
         if (!conversation) return
-        conversation.summary = data.content
+        // DEPRECATED: conversation.summary = data.content
+        // DEPRECATED: console.log(data.content);
       }
       createChatCompletionMessage(summary, cfg, messageCallback)
     }
