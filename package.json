@@ -717,12 +717,12 @@
       ],
       "editor/title": [
         {
-          "submenu": "vscode-openai.menu.toolbox",
+          "submenu": "vscode-openai.menu.editor",
           "group": "navigation",
           "when": "!activeEditorIsReadonly && vscode-openai.editor.enabled"
         }
       ],
-      "vscode-openai.menu.toolbox": [
+      "vscode-openai.menu.editor": [
         {
           "command": "_vscode-openai.editor.code.comment",
           "group": "prompt-editor.source@1",
@@ -769,8 +769,8 @@
     },
     "submenus": [
       {
-        "id": "vscode-openai.menu.toolbox",
-        "label": "vscode-openai.menu.toolbox",
+        "id": "vscode-openai.menu.editor",
+        "label": "OpenAI Editor",
         "icon": {
           "light": "./assets/openai-light.png",
           "dark": "./assets/openai-dark.png"
