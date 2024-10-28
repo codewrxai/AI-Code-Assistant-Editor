@@ -3,7 +3,7 @@
   "displayName": "codewrx-openai",
   "description": "A custom vscode-openai extension that seamlessly incorporates codewrx.ai features into VSCode. Originally published by arbs.io",
   "version": "1.6.12",
-  "publisher": "CODEWRX",
+  "publisher": "MackeyKinard",
   "icon": "images/logo_128x128.png",
   "private": true,
   "license": "MIT",
