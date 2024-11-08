@@ -8,17 +8,17 @@ export const VSCODE_OPENAI_QP_PERSONA = {
   GENERAL_ICON: 'comment',
   GENERAL_DESC: 'General Assists',
 
-  DEVELOPER: 'Developer/Programmer',
+  DEVELOPER: 'Web Game Developer',
   DEVELOPER_ID: 'ce0fa668-63b7-4183-a661-53025dfbb4a5',
   DEVELOPER_ICON: 'debug-console',
   DEVELOPER_DESC:
-    'Assists with design, develop, and maintain of software applications and systems',
+    'Assists with the development of modern software applications and systems',
 
-  SYSTEM_ADMIN: 'System Administrator',
+  SYSTEM_ADMIN: 'Source Code Translator',
   SYSTEM_ADMIN_ID: 'e0aa8407-76ed-446f-8619-73ea7b8cf624',
   SYSTEM_ADMIN_ICON: 'terminal-cmd',
   SYSTEM_ADMIN_DESC:
-    'Assists with managing and maintain computer systems, networks, and servers',
+    'Assists with translating source code from one programming language to another',
 
   NETWORK_ENGINEER: 'Network Engineer',
   NETWORK_ENGINEER_ID: '26947f1b-3fc5-46cb-8904-00b800838a31',

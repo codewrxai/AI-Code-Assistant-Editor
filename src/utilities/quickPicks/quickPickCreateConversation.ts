@@ -65,7 +65,34 @@ export async function quickPickCreateConversation(
     })
   }
 
+  // Mackey Kinard - Default Personas
   function getAvailablePersonas(): QuickPickItem[] {
+    const quickPickItemTypes: QuickPickItem[] = [
+      {
+        label: 'Configuration',
+        kind: QuickPickItemKind.Separator,
+      },
+      {
+        label: VSCODE_OPENAI_QP_PERSONA.CONFIGURATION,
+        iconPath: new ThemeIcon(VSCODE_OPENAI_QP_PERSONA.CONFIGURATION_ICON),
+        detail: VSCODE_OPENAI_QP_PERSONA.CONFIGURATION_DESC,
+      },
+      {
+        label: 'Personas',
+        kind: QuickPickItemKind.Separator,
+      },
+      {
+        label: VSCODE_OPENAI_QP_PERSONA.DEVELOPER,
+        iconPath: new ThemeIcon(VSCODE_OPENAI_QP_PERSONA.DEVELOPER_ICON),
+        detail: VSCODE_OPENAI_QP_PERSONA.DEVELOPER_DESC,
+      },
+      {
+        label: VSCODE_OPENAI_QP_PERSONA.SYSTEM_ADMIN,
+        iconPath: new ThemeIcon(VSCODE_OPENAI_QP_PERSONA.SYSTEM_ADMIN_ICON),
+        detail: VSCODE_OPENAI_QP_PERSONA.SYSTEM_ADMIN_DESC,
+      }
+    ]
+    /* DEPRECATED - Use Babylon Toolkit Personas Only
     const quickPickItemTypes: QuickPickItem[] = [
       {
         label: 'Configuration',
@@ -163,6 +190,7 @@ export async function quickPickCreateConversation(
         detail: VSCODE_OPENAI_QP_PERSONA.ENTERPRISE_ARCHITECT_DESC,
       },
     ]
+    */
     return quickPickItemTypes
   }
 

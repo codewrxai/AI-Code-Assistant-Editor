@@ -72,6 +72,10 @@ function getPersonaIcon(personaRoleName: string, fillColor: string): string {
   switch (personaRoleName) {
     case 'General Chat':
       return GeneralChatIcon(fillColor)
+    case 'Web Game Developer':
+      return DeveloperProgrammerIcon(fillColor)
+    case 'Source Code Translator':
+      return SystemAdministratorIcon(fillColor)
     case 'Developer/Programmer':
       return DeveloperProgrammerIcon(fillColor)
     case 'System Administrator':

@@ -9,7 +9,8 @@ import assert from 'assert'
 
 function getAssistantName(): string {
   if (convCfg.assistantRules) {
-    return 'You are an AI assistant called vscode-openai. '
+    // return 'You are an AI assistant called vscode-openai. '
+    return ''
   }
   return ''
 }
@@ -39,6 +40,19 @@ function getPrompt(promptName: string): string {
   return `${getAssistantName()} ${prompt} ${getAssistantRule()}`
 }
 
+function getRawPrompt(promptName: string): string {
+  const prompt = workspace
+    .getConfiguration('vscode-openai')
+    .get(`prompts.persona.${promptName}`) as string
+  assert(prompt)
+  return prompt
+}
+
+function getTranslatePrompt(): string {
+  return (getRawPrompt('translator') + '\n\n')
+}
+
+// Mackey Kinard - Default Personas
 function getSystemPersonas(): IPersonaOpenAI[] {
   const SystemPersonas: IPersonaOpenAI[] = [
     {
@@ -71,9 +85,46 @@ function getSystemPersonas(): IPersonaOpenAI[] {
         model: settingCfg.defaultModel,
       },
       prompt: {
-        system: getPrompt('systemAdmin'),
+        system: getTranslatePrompt(),
       },
     },
+  ]
+  /* DEPRECATED - Use Babylon Toolkit Personas Only
+  const SystemPersonas: IPersonaOpenAI[] = [
+    {
+      roleId: VSCODE_OPENAI_QP_PERSONA.GENERAL_ID,
+      roleName: VSCODE_OPENAI_QP_PERSONA.GENERAL,
+      configuration: {
+        service: settingCfg.host,
+        model: settingCfg.defaultModel,
+      },
+      prompt: {
+        system: getPrompt('generalChat'),
+      },
+    },
+    {
+      roleId: VSCODE_OPENAI_QP_PERSONA.DEVELOPER_ID,
+      roleName: VSCODE_OPENAI_QP_PERSONA.DEVELOPER,
+      configuration: {
+        service: settingCfg.host,
+        model: settingCfg.defaultModel,
+      },
+      prompt: {
+        system: getPrompt('developer'),
+      },
+    },
+    {
+      roleId: VSCODE_OPENAI_QP_PERSONA.SYSTEM_ADMIN_ID,
+      roleName: VSCODE_OPENAI_QP_PERSONA.SYSTEM_ADMIN,
+      configuration: {
+        service: settingCfg.host,
+        model: settingCfg.defaultModel,
+      },
+      prompt: {
+        system: getPrompt('translator'),
+      },
+    },
+    
     {
       roleId: VSCODE_OPENAI_QP_PERSONA.NETWORK_ENGINEER_ID,
       roleName: VSCODE_OPENAI_QP_PERSONA.NETWORK_ENGINEER,
@@ -228,7 +279,7 @@ function getSystemPersonas(): IPersonaOpenAI[] {
         system: getPrompt('enterpriseArchitect'),
       },
     },
-  ]
+  ]*/
   return SystemPersonas
 }
 export default getSystemPersonas
