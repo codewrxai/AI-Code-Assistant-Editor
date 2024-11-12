@@ -7,6 +7,8 @@ import {
 import { VSCODE_OPENAI_QP_PERSONA } from '@app/constants'
 import assert from 'assert'
 
+const CONVERT_INSTRUCTIONS = "Convert all script content, do not omit any functions or properties unless instructed.";
+
 function getAssistantName(): string {
   if (convCfg.assistantRules) {
     // return 'You are an AI assistant called vscode-openai. '
@@ -49,7 +51,7 @@ function getRawPrompt(promptName: string): string {
 }
 
 function getTranslatePrompt(): string {
-  return (getRawPrompt('translator') + '\n\n')
+  return (getRawPrompt('translator') + '\n\n' + CONVERT_INSTRUCTIONS + '\n\n')
 }
 
 // Mackey Kinard - Default Personas

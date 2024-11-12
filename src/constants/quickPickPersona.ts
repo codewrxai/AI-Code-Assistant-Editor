@@ -12,7 +12,7 @@ export const VSCODE_OPENAI_QP_PERSONA = {
   DEVELOPER_ID: 'ce0fa668-63b7-4183-a661-53025dfbb4a5',
   DEVELOPER_ICON: 'debug-console',
   DEVELOPER_DESC:
-    'Assists with the development of modern software applications and systems',
+    'Assists with the development of modern babylon.js web game applications',
 
   SYSTEM_ADMIN: 'Source Code Translator',
   SYSTEM_ADMIN_ID: 'e0aa8407-76ed-446f-8619-73ea7b8cf624',
