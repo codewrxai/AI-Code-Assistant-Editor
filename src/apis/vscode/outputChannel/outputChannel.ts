@@ -56,7 +56,7 @@ export function logWarning(warning: any): void {
       ''
     )
   OutputChannelFactory.getLogChannel().appendLine(logMessage)
-  OutputChannelFactory.getLogChannel().show()
+  // DEPRECATED: OutputChannelFactory.getLogChannel().show()
 }
 
 export function logError(error: Error): void {
@@ -65,7 +65,7 @@ export function logError(error: Error): void {
     ''
   )
   OutputChannelFactory.getLogChannel().appendLine(logMessage)
-  OutputChannelFactory.getLogChannel().show()
+  // DEPRECATED: OutputChannelFactory.getLogChannel().show()
 }
 
 function getTimeAndms(): string {
@@ -77,5 +77,5 @@ function getTimeAndms(): string {
 export function showInfo(message: string): void {
   OutputChannelFactory.getLogChannel().clear()
   OutputChannelFactory.getLogChannel().appendLine(message)
-  OutputChannelFactory.getLogChannel().show()
+  // DEPRECATED: OutputChannelFactory.getLogChannel().show()
 }
